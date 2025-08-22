@@ -1,0 +1,55 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    background-image: url(src/images/background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.container{
+    width: 100vw;
+    height:100vh;
+    border: 2px solid black;
+    display :grid;
+    grid-template-columns: 29% 9% 19% 9% 29%;
+    grid-template-rows: 34% 34% 29%;
+    row-gap: 5px;
+    column-gap: 1%;
+}
+#slide1{
+    grid-column: 1/4;
+}
+#slide2{
+    grid-column: 4/6;
+}
+#slide3{
+    grid-column: 1/2;
+}
+#slide4{
+    grid-column: 2/5;
+}
+#slide5{
+    grid-column: 5/6;
+    grid-row: 2/4;
+}
+#slide6{
+    grid-column: 1/5;
+}
+img{
+    margin-right : 2px;
+    float:left;
+    width: 50%;
+    height: 100%;
+    border-radius: 25px;
+}
+div{
+    border: 2px solid black;
+    border-radius: 25px;
+}
+.container div:hover{
+    background-color: #222;
+    color:aliceblue;
+    font-size: 1.1em;
+}

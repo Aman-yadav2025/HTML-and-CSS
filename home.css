@@ -1,5 +1,5 @@
 body{
-    background-image: url(src/images/background.avif);
+    background-image: url(src/images/background.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
@@ -60,10 +60,11 @@ nav a{
 }
 
 .contant p{
+    font-family: cursive;
     margin-left:1%;
     margin-right: 1%;
     font-size: 1.5em;
-    color:blueviolet
+    color:rgb(99, 172, 216)
 }
 button{
     min-width:10%;
@@ -83,4 +84,22 @@ button{
 }
 .positions img{
     margin-bottom: 0%;
+    margin-right:1%;
+}
+.navbar a:hover{
+    font-size:1.1em;
+    color: rgba(99, 99, 238, 0.768);
+}
+img:hover{
+    border:2px solid black;
+    border-radius: 100%;
+    width:5%;
+}
+img{
+    margin-bottom: 2%;
+}
+button:hover{
+    background-color: rgb(56, 56, 237);
+    color: aliceblue;
+    font-size: 1.6em;
 }
