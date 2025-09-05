@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Games</title>
+    <link rel ="icon" href ="src/logo.png">
+    <link rel = "stylesheet" href = "games.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo"><img src = "src/logo.png" style = "width: 25%;"></a>
+            <ul class="nav-menu">
+                <li><a href="#2048" class="nav-link">2048</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="mobile-menu">
+                ☰
+            </button>
+        </div>
+    </nav>
+    <section>
+            <div class="section-divider">Background Option 2</div>
+    </section>
+    <section class="game-option gm1" id = "2048">
+        <div class="geometric-shapes">
+            <div class="shape"></div>
+            <div class="shape"></div>
+            <div class="shape"></div>
+        </div>
+        <div class="content-overlay">
+            <h1>Play 2048</h1>
+            <p style = "color:rgb(187, 209, 224);font-weight: bold;font-size: 1.2em;"><b>Rules</b><br>
+                Players swipe to move all tiles in a chosen direction (up, down, left, or right), with identical tiles merging into one higher-valued tile. <br>After each move, a new tile (either a 2 or a 4) appears in a random empty space.<br> The game ends when no valid moves—either tile movements or combinations—are possible
+            </p>
+            <br>
+            <div class = "game-container">
+            <div class = "score-container">
+            <div>
+                <h2>Score</h2>
+                <h3 id = "score">0</h3>
+            </div>
+            <div>
+                <h2>Best</h2>
+                <h3 id = "best-score">0</h3>
+            </div>
+            </div>
+            <div class = "gameArea">
+            <div class = "grid-container">
+            <div class ="grid-row">
+                <div class ="div-cell"></div>
+                <div class ="div-cell"></div>
+                <div class ="div-cell"></div>
+                <div class ="div-cell"></div>
+            </div>
+            <div class ="grid-row">
+                <div class ="div-cell"></div>
+                <div class ="div-cell"></div>
+                <div class ="div-cell"></div>
+                <div class ="div-cell"></div>
+            </div>
+            <div class ="grid-row">
+                <div class ="div-cell"></div>
+                <div class ="div-cell"></div>
+                <div class ="div-cell"></div>
+                <div class ="div-cell"></div>
+            </div>
+            <div class ="grid-row">
+                <div class ="div-cell"></div>
+                <div class ="div-cell"></div>
+                <div class ="div-cell"></div>
+                <div class ="div-cell"></div>
+            </div>
+        </div>
+        <div class="tile-container" id="tile-container"></div>
+        <div class ="game-over" id="game-over">
+            <h2 id="game-message">Game Over!</h2>
+            <button class="newGame()">Try Again</button>
+        </div>
+        </div>
+        </div>
+        <br>
+        <button class="game-button">Play Now</button>
+        </div>
+    </section>
+    <script src = "game.js"></script>
+</body>
+</html>
