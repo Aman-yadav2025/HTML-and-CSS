@@ -225,8 +225,8 @@ constructor() {
                             const tile = document.createElement('div');
                             tile.className = `tile tile-${this.board[r][c]}`;
                             tile.textContent = this.board[r][c];
-                            tile.style.left = `${c * 19 +10}vh`;
-                            tile.style.top = `${r * 19 +10}vh`;
+                            tile.style.left = `${c * 19.25 }vh`;
+                            tile.style.top = `${r * 19.25 }vh`;
                             
                             if (this.moved) {
                                 tile.classList.add('tile-new');
@@ -294,4 +294,13 @@ constructor() {
                 gameOver.classList.add('active');
             }
 }
+function newgame(){
 const game = new Game2048();
+}
+let start= document.getElementById("game-button")
+start.addEventListener('click',() =>{
+    start.innerText = 'New game';
+    newgame();
+});
+
+let retry = document.getElementById('newGame');

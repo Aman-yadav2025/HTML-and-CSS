@@ -66,7 +66,7 @@ body
             border-radius: 15px;
             backdrop-filter: blur(10px);
         }
-.game-button {
+#game-button {
             background: linear-gradient(45deg, #ff6b6b, #ee5a24);
             border: none;
             padding: 15px 30px;
@@ -250,8 +250,8 @@ body
         }
 
         .tile {
-            width: 23%;
-            height: 23%;
+            width: 18vh;
+            height: 18vh;
             /* background: #eee4da; */
             border-radius: 8px;
             font-weight: bold;
