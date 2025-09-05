@@ -52,6 +52,42 @@ constructor() {
         break;
         }
         });
+        //for mobile
+        let startX, startY;
+            const container = document.querySelector('.game-container');
+                
+            container.addEventListener('touchstart', (e) => {
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                e.preventDefault();
+                });
+
+            container.addEventListener('touchend', (e) => {
+                if (!startX || !startY) return;
+                
+                const endX = e.changedTouches[0].clientX;
+                const endY = e.changedTouches[0].clientY;
+                
+                const diffX = startX - endX;
+                const diffY = startY - endY;
+                
+                if (Math.abs(diffX) > Math.abs(diffY)) {
+                    if (diffX > 0) {
+                        this.move('left');
+                    } else {
+                        this.move('right');
+                    }
+                } else {
+                    if (diffY > 0) {
+                        this.move('up');
+                    } else {
+                        this.move('down');
+                    }
+                }
+                
+                startX = startY = null;
+                e.preventDefault();
+            });
     }
 
     addRandomTile(){
@@ -300,7 +336,6 @@ const game = new Game2048();
 let start= document.getElementById("game-button")
 start.addEventListener('click',() =>{
     start.innerText = 'New game';
+    document.getElementById('g1').classList.remove('hidden');
     newgame();
 });
-
-let retry = document.getElementById('newGame');
